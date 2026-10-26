@@ -1,0 +1,20 @@
+# Data and model artefacts: keep out of git
+*.keras
+*.h5
+*.npy
+*.zip
+specialist_checkpoint.json
+oof_arrays/
+clahe*/
+train_images/
+images/
+*.jpg
+*.JPG
+*.png
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env

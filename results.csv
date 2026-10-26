@@ -1,0 +1,16 @@
+section,experiment,description,dataset,protocol,metric,value,sd,unit,notes
+monolithic,Monolithic ConvNeXt-Base,"8 sigmoids, weighted BCE, threshold 0.5","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",macro_f1,0.432,,score,
+monolithic,Monolithic ConvNeXt-Base,"8 sigmoids, weighted BCE, threshold 0.5","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",micro_f1,0.492,,score,
+monolithic,Monolithic ConvNeXt-Base,"8 sigmoids, weighted BCE, threshold 0.5","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",hamming_loss,0.264,,score,
+monolithic,Monolithic ConvNeXt-Base,"8 sigmoids, weighted BCE, threshold tuned per label","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",macro_f1,0.468,,score,Best maize result; thresholds tuned on the same OOF predictions (optimistic)
+monolithic,Monolithic ConvNeXt-Base,"8 sigmoids, weighted BCE, threshold tuned per label","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",micro_f1,0.543,,score,Best maize result; thresholds tuned on the same OOF predictions (optimistic)
+monolithic,Monolithic ConvNeXt-Base,"8 sigmoids, weighted BCE, threshold tuned per label","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",hamming_loss,0.204,,score,Best maize result; thresholds tuned on the same OOF predictions (optimistic)
+specialist,"Specialists, fold 1","S1-S4 binary + S5 four-label, threshold 0.5","Maize (Wiesner-Hanks 2018), 8 labels",Fold 1 only,macro_f1,0.3338,,score,
+specialist,"Specialists, fold 1","S1-S4 binary + S5 four-label, threshold 0.5","Maize (Wiesner-Hanks 2018), 8 labels",Fold 1 only,micro_f1,0.3558,,score,
+specialist,"Specialists, all folds","Combined 8-label output, threshold 0.5","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",macro_f1,0.2598,,score,Non-subset rows set to 0 (see Known Issues)
+specialist,"Specialists, all folds","Combined 8-label output, tuned thresholds","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",macro_f1,0.2825,,score,Non-subset rows set to 0 (see Known Issues)
+specialist_s5_phase_check,S5,"Best validation AUC, phase 1 (frozen)","Maize (Wiesner-Hanks 2018), 8 labels",One fold,val_auc,0.8026,,score,Led to finetune=False for S5
+specialist_s5_phase_check,S5,"Best validation AUC, phase 2A (top 30 unfrozen)","Maize (Wiesner-Hanks 2018), 8 labels",One fold,val_auc,0.783,,score,Led to finetune=False for S5
+specialist_s5_phase_check,S5,"Best validation AUC, phase 2B (full fine-tune)","Maize (Wiesner-Hanks 2018), 8 labels",One fold,val_auc,0.7919,,score,Led to finetune=False for S5
+per_label_approx,"Monolithic, tuned","GLS (1,084 positives)","Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",f1,0.83,,score,Approximate; re-run evaluation cell for exact value
+per_label_approx,"Monolithic, tuned",SR (39 positives),"Maize (Wiesner-Hanks 2018), 8 labels","5-fold MultilabelStratifiedKFold, OOF",f1,0.14,,score,Approximate; re-run evaluation cell for exact value
