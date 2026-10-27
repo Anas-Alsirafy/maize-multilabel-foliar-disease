@@ -127,6 +127,10 @@ Sections 12–16 produce the per-specialist reports, threshold tuning, the 8-lab
 - [ ] 3–5 seeds; exact per-label precision/recall/F1
 - [ ] Write up as the first benchmark on this dataset
 
+## Documentation
+
+Full handover documentation (guide, environment setup, data, configs, experiments, results, known issues, future work) is in [`docs/`](docs/README.md), as Markdown and PDF.
+
 ## Contact
 
 Anas Alsirafy, American University in Cairo (anas.samy@aucegypt.edu). Supervisor: Prof. Maki K. Habib.
